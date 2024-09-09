@@ -1,6 +1,6 @@
 # RecipeRepo API
 
-RecipeRepo is a REST API for managing recipes, built using Django and Django REST Framework (DRF). The API allows users to create, read, update, and delete (CRUD) recipe entries.
+RecipeRepo is an REST API for managing recipes, which was built using Django and Django REST Framework (DRF). The API allows users to create, read, update, and delete (CRUD) recipe entries.
 
 ## Features
 - List all recipes
