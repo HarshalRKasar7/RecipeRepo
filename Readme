@@ -1,0 +1,133 @@
+# RecipeRepo API
+
+RecipeRepo is a REST API for managing recipes, built using Django and Django REST Framework (DRF). The API allows users to create, read, update, and delete (CRUD) recipe entries.
+
+## Features
+- List all recipes
+- Create a new recipe
+- Retrieve details of a specific recipe
+- Update an existing recipe
+- Delete a recipe
+
+## Requirements
+
+- Python 3.11
+- Django 5.x or higher
+- Django REST Framework 3.x or higher
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/HarshalRKasar7/RecipeRepo.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd RecipeRepo
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run migrations:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+5. Start the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+## API Endpoints
+
+### List Recipes
+- **URL**: `/api/recipes/`
+- **Method**: `GET`
+- **Description**: Retrieves a list of all recipes.
+- **Response**:
+    ```json
+    {
+        "recipes": [
+            {
+                "id": 1,
+                "name": "Recipe Name",
+                "ingredients": "List of ingredients",
+                "instructions": "Steps to prepare the recipe"
+            },
+            ...
+        ]
+    }
+    ```
+
+### Create Recipe
+- **URL**: `/api/recipes/`
+- **Method**: `POST`
+- **Description**: Creates a new recipe.
+- **Request Body**:
+    ```json
+    {
+        "name": "Recipe Name",
+        "ingredients": "List of ingredients",
+        "instructions": "Steps to prepare the recipe"
+    }
+    ```
+- **Response**:
+    ```json
+    {
+        "id": 1,
+        "name": "Recipe Name",
+        "ingredients": "List of ingredients",
+        "instructions": "Steps to prepare the recipe"
+    }
+    ```
+
+### Retrieve Recipe Details
+- **URL**: `/api/recipes/<id>/`
+- **Method**: `GET`
+- **Description**: Retrieves details of a recipe by ID.
+- **Response**:
+    ```json
+    {
+        "id": 1,
+        "name": "Recipe Name",
+        "ingredients": "List of ingredients",
+        "instructions": "Steps to prepare the recipe"
+    }
+    ```
+
+### Update Recipe
+- **URL**: `/api/recipes/<id>/`
+- **Method**: `PUT`
+- **Description**: Updates an existing recipe by ID.
+- **Request Body**:
+    ```json
+    {
+        "name": "Updated Recipe Name",
+        "ingredients": "Updated ingredients",
+        "instructions": "Updated instructions"
+    }
+    ```
+- **Response**:
+    ```json
+    {
+        "id": 1,
+        "name": "Updated Recipe Name",
+        "ingredients": "Updated ingredients",
+        "instructions": "Updated instructions"
+    }
+    ```
+
+### Delete Recipe
+- **URL**: `/api/recipes/<id>/`
+- **Method**: `DELETE`
+- **Description**: Deletes a recipe by ID.
+- **Response**: `204 No Content`
